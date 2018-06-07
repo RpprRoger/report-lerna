@@ -1,7 +1,12 @@
 # report-lerna
 
+not published yet, just clone the repo and run `npm link` in the root of the package
+
 ```bash
-npm install -g report-lerna
+# npm install -g report-lerna-hoist-versions
+git clone git@github.com:RpprRoger/report-lerna.git
+cd report-lerna
+npm link
 
 # from the root of a lerna repo
 report-lerna
