@@ -1,0 +1,17 @@
+{
+  "name": "@robpm/report-lerna-packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "report-lerna": "./report-package-inconsistency.js"
+  },
+  "author": "Rob Preus-MacLaren <rpprroger@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@lerna/collect-packages": "^3.0.0-beta.17"
+  }
+}
