@@ -3,16 +3,14 @@ const { writeFileSync } = require('fs');
 const { join } = require('path');
 const collectPackages = require('@lerna/collect-packages');
 
-const repoDir = process.pwd();
-
-return console.log(repoDir);
+const repoDir = process.cwd();
 
 const addAndReport = (deps, newDeps = {}, name) => {
   Object.keys(newDeps).forEach(packageName => {
     const version = newDeps[packageName];
 
     if (deps[packageName] && deps[packageName] !== version) {
-      console.warn(`packageName missmatch in ${name}!`);
+      console.warn(`Missmatch in ${name}. ${packageName}@${version} -> ${packageName}@${deps[packageName]}`);
     } else {
       deps[packageName] = version;
     }
